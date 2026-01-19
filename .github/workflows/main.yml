@@ -26,3 +26,9 @@ jobs:
     steps:
       - name: "Verificação da versão do NodeJS atual"
         run: node --version || echo "NodeJS não está instalado"
+      - name: "Definição da versão do NodeJS"
+        uses: actions/setup-node@v6
+        with:
+          node-version: "24"
+      - name: "Verificação da versão do NodeJS após atualização"
+        run: node --version || echo "NodeJS não está instalado"
